@@ -5,13 +5,13 @@ struct Base {
 };
 
 struct Derived1 : Base {
-    virtual void do_semothing() {
+    void do_something() override{
         std::cout << "Derived1!!!" << std::endl;
     }
 };
 
 struct Derived2 : Base {
-    virtual void do_semothing() {
+    void do_something() override{
         std::cout << "Derived2!!!" << std::endl;
     }
 };
@@ -21,9 +21,9 @@ int main(int argc, const char *argv[]) {
     std::cout << "Welcome to the UNA!" << std::endl;
 
     Derived1 derived1;
-    derived1.do_semothing();
+    derived1.do_something();
 
     Derived2 derived2;
-    derived2.do_semothing();
+    derived2.do_something();
 
 }  // end function main
